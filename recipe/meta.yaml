@@ -1,5 +1,5 @@
 {% set name = "xaitk-saliency" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xaitk_saliency-{{ version }}.tar.gz
-  sha256: 980b9b55d2793a2369409e687b32d3624b81055563db1fc832d496943171717d
+  sha256: 33162c2935ab557986443e06d8184801e0d47d44bc07e59709fcad91b355d86b
 
 build:
   skip: true  # [py>=400 or py2k]
@@ -32,16 +32,15 @@ requirements:
     - smqtk-detection >=0.19.0
     - scipy >=1.10
     - click >=8.0.3
+    - setuptools >=78.1.1
   run_constrained:
     - notebook >=7.2.2
     - matplotlib >=3.4.1
     - papermill >=2.3.3
-    - pytorch >=1.9.0
+    - pytorch >=2.2.0
     - torchvision >=0.10.0
     - tqdm >=4.66.3
     - kwcoco >=0.2.18
-    - pyyaml >=6.0.1
-    - shapely >=2.0.2
 
 test:
   imports:
