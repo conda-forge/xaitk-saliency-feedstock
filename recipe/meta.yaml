@@ -10,7 +10,7 @@ source:
   sha256: 4d85350fd65a9a631e295663eb3bde224836b38d4306fbc8216020d9d30b0003
 
 build:
-  skip: true  # [py>=400 or py2k]
+  skip: true  # [py>312]
   entry_points:
     - sal-on-coco-dets = xaitk_saliency.utils.bin.sal_on_coco_dets:sal_on_coco_dets
   script: {{ PYTHON }} -m pip install . -vv
