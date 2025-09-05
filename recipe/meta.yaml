@@ -1,5 +1,5 @@
 {% set name = "xaitk-saliency" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xaitk_saliency-{{ version }}.tar.gz
-  sha256: 33162c2935ab557986443e06d8184801e0d47d44bc07e59709fcad91b355d86b
+  sha256: 59c9e4a926379e818b78a2bd18e9df9cbd099cd4a027320527cdcadfafe44d57
 
 build:
   skip: true  # [py>312]
   entry_points:
     - sal-on-coco-dets = xaitk_saliency.utils.bin.sal_on_coco_dets:sal_on_coco_dets
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
