@@ -1,5 +1,5 @@
 {% set name = "xaitk-saliency" %}
-{% set version = "0.14.1" %}
+{% set version = "0.14.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xaitk_saliency-{{ version }}.tar.gz
-  sha256: 59c9e4a926379e818b78a2bd18e9df9cbd099cd4a027320527cdcadfafe44d57
+  sha256: ff870803e6e27303af24f41b6fc4b80fe2152b37e8243581018f2516da6cd2d9
 
 build:
   entry_points:
     - sal-on-coco-dets = xaitk_saliency.utils.bin.sal_on_coco_dets:sal_on_coco_dets
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -32,7 +32,7 @@ requirements:
     - smqtk-detection >=0.23.0
     - scipy >=1.15.0
     - click >=8.0.3
-    - setuptools >=78.1.1
+    - setuptools >=78.1.1,<82.0.0
   run_constrained:
     - notebook >=7.2.2
     - matplotlib >=3.4.1
