@@ -22,7 +22,7 @@ requirements:
     - poetry-core
   run:
     - python
-    - numpy >=1.26.4  # [py<313]
+    - numpy >=1.24.2  # [py<313]
     - numpy >=2.1  # [py>=313]
     - scikit-image >=0.20
     - scikit-learn >=1.5.2
@@ -41,6 +41,8 @@ requirements:
     - torchvision >=0.22.0
     - tqdm >=4.66.3
     - kwcoco >=0.2.18
+    - imagecodecs <2026  # [py<313]
+    - imagecodecs >=2026  # [py>=313]
 
 test:
   imports:
