@@ -22,23 +22,23 @@ requirements:
     - poetry-core
   run:
     - python
-    - numpy >=1.22  # [py<312]
-    - numpy >=2.1  # [py>312]
-    - scikit-image >=0.25
-    - scikit-learn >=1.7
+    - numpy >=1.24.2  # [py<313]
+    - numpy >=2.1  # [py>=313]
+    - scikit-image >=0.20
+    - scikit-learn >=1.5.2
     - smqtk-classifier >=0.20.0
     - smqtk-core >=0.20.0
     - smqtk-descriptors >=0.20.0
     - smqtk-detection >=0.23.0
-    - scipy >=1.15.0
+    - scipy >=1.10.0
     - click >=8.0.3
     - setuptools >=78.1.1,<82.0.0
   run_constrained:
     - notebook >=7.2.2
-    - matplotlib >=3.4.1
+    - matplotlib >=3.7.1
     - papermill >=2.3.3
-    - pytorch >=2.2.0
-    - torchvision >=0.10.0
+    - pytorch >=2.7.0
+    - torchvision >=0.22.0
     - tqdm >=4.66.3
     - kwcoco >=0.2.18
 
