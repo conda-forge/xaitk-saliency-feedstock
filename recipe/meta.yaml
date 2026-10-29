@@ -1,13 +1,13 @@
 {% set name = "xaitk-saliency" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xaitk_saliency-{{ version }}.tar.gz
-  sha256: 211bc7ed58fa82cef2066ae24e42dcf24b08298bccef500953155a28ecad12d4
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/xaitk_saliency-{{ version }}.tar.gz
+  sha256: f7932666c9c0044effe7329852c9518300c9d043c339895e246a01e332ba6924
 
 build:
   entry_points:
